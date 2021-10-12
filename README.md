@@ -1,2 +1,3 @@
 # Sagrado.Futbol
-Repo de um site agregador de vídeos de futebol feito com LAMP + laravel e react
+
+Python3.9 + Django 3.2 + postgresql 13.4 
