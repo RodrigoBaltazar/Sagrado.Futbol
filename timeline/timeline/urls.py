@@ -18,7 +18,11 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
+from futebol import views
+
 urlpatterns = [
-    path('futebol', include('futebol.urls')),
+    path('futebol/', include('futebol.urls')),
     path('admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('accounts/', include('allauth.urls')),
+    path('', views.user_view, name='user_view'),
+] #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

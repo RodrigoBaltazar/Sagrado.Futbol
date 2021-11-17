@@ -21,3 +21,6 @@ def home_view(request):
 
     context['form'] = form
     return render(request, "index.html", context)
+
+def user_view(request):
+    return render(request, 'user_view.html')
