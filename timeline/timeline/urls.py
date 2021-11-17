@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from futebol import views
 
 urlpatterns = [
-    path('futebol/', include('futebol.urls')),
+    path('futebol/', views.indexPage, name='indexPage'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', views.user_view, name='user_view'),

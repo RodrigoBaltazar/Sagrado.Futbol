@@ -5,7 +5,7 @@ from .forms import VideoForm
 from .models import Video
 
 
-def index(request):
+def indexPage(request):
     latest_videos_list = Video.objects.order_by('-pub_date')[:5]
     template = loader.get_template('futebol/index.html')
     context = {
